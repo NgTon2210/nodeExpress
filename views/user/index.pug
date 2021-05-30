@@ -1,0 +1,8 @@
+html
+    head 
+        title pug
+    body
+       ul
+        each user in users
+            li= user.name+user.id+user.age
+       a(href="http://localhost:3000/user/create") create
