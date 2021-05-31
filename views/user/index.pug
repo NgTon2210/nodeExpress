@@ -4,5 +4,8 @@ html
     body
        ul
         each user in users
-            li= user.name+user.id+user.age
-       a(href="http://localhost:3000/user/create") create
+            li= user.name + "  "
+                span(style="color:blue; margin-left:10px") view:
+                    a(href="/user/"+user.id  style="font-size:22px")= user.name 
+                    a(href="/user/delete/"+user.id  style="margin-left:20px; color:red") Delete
+       a(href="/user/create" style="background:green; padding:5px 10px; color:white") create
